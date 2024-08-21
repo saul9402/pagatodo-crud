@@ -1,0 +1,13 @@
+hibernate:
+  dialect: org.hibernate.dialect.DB2Dialect
+  jdbc:
+    log:
+      warnings: false
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.DB2Dialect
+  datasource:
+    username: db2
+    password: root
+    url: jdbc:db2://localhost:25000/sample
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
