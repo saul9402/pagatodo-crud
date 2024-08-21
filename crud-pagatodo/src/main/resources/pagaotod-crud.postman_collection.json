@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "3aad0736-6396-4476-8ff5-998f662d31d3",
+		"name": "pagaotod-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26921155"
+	},
+	"item": [
+		{
+			"name": "departamentos",
+			"item": [
+				{
+					"name": "get-departamentos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(200))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-url}}/departamentos",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear-departamento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Nuevo Departamento\",\r\n\t\"descripcion\": \"Nueva descripción\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/departamentos",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-departamentos-por-id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(200))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-url}}/departamentos/2",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"departamentos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar-departamento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-url}}/departamentos/6/Nuevo Departamentogfs",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"departamentos",
+								"6",
+								"Nuevo Departamentogfs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar-nombre-departamento-sp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Nuevo Departamento\",\r\n\t\"descripcion\": \"Nueva descripción\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/departamentos",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar-departamento-por-id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Nuevo Departamento\",\r\n\t\"descripcion\": \"Nueva descripción\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/departamentos/6",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"departamentos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "empleados",
+			"item": [
+				{
+					"name": "get-empleados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(200))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-url}}/empleados",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear-empleado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"primerNombre\": \"Carlos\",\r\n\t\"segundoNombre\": \"Mercado\",\r\n\t\"apellidoPaterno\": \"Marques\",\r\n\t\"apellidoMaterno\": \"Hernadez\",\r\n\t\"fechaNacimiento\": \"1994-03-02\",\r\n\t\"numeroEmpleado\": \"5155615\",\r\n\t\"salarioBruto\": 10000,\r\n\t\"fechaIngreso\": \"2024-09-10\",\r\n\t\"departamento\": {\r\n\t\t\"id\": 2,\r\n\t\t\"nombre\": \"RR.HH.\",\r\n\t\t\"descripcion\": \"Descripción RR.HH.\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/empleados",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-empleado-por-id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(200))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-url}}/empleados/5",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"empleados",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar-empleados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"primerNombre\": \"Carlos\",\r\n\t\"segundoNombre\": \"Paredes\",\r\n\t\"apellidoPaterno\": \"Marques\",\r\n\t\"apellidoMaterno\": \"Hernadez\",\r\n\t\"fechaNacimiento\": \"1994-03-02\",\r\n\t\"numeroEmpleado\": \"5155615\",\r\n\t\"salarioBruto\": 10000,\r\n\t\"fechaIngreso\": \"2024-09-10\",\r\n\t\"departamento\": {\r\n\t\t\"id\": 2,\r\n\t\t\"nombre\": \"RR.HH.\",\r\n\t\t\"descripcion\": \"Descripción RR.HH.\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/empleados/5",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"empleados",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener-por-departamento-id-sp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Nuevo Departamento\",\r\n\t\"descripcion\": \"Nueva descripción\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/empleados/por-departamento/2",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"empleados",
+								"por-departamento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar-empleados-por-id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () =>pm.response.to.have.status(201))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Nuevo Departamento\",\r\n\t\"descripcion\": \"Nueva descripción\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/empleados/6",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"empleados",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "456",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
